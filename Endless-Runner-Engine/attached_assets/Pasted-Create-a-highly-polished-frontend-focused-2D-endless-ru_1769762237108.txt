@@ -1,0 +1,104 @@
+Create a highly polished, frontend-focused 2D endless runner game that matches the gameplay feel, UI layout, color energy, and interaction patterns of Subway Surfers as closely as possible, while remaining fully original and implemented entirely in 2D.
+
+CORE CONSTRAINTS:
+- Fully 2D only (no 3D, no WebGL).
+- Do NOT use Subway Surfers name, logo, characters, fonts, or assets.
+- Visuals and gameplay should feel immediately recognizable, but all assets must be original.
+- Use ONLY HTML, CSS, and vanilla JavaScript.
+- This should look like a real mobile game frontend, not a simple demo.
+
+TECH STACK:
+- HTML5 Canvas for gameplay
+- CSS for UI, HUD, overlays, and transitions
+- Vanilla JavaScript (ES6)
+- Separate files: index.html, style.css, script.js
+
+GAMEPLAY (SUBWAY-SURFERS-LIKE):
+- Endless runner with automatic forward movement.
+- 3-lane system with smooth lane switching.
+- Controls:
+  - Desktop: Arrow Left, Arrow Right, Arrow Up
+  - Mobile: Swipe Left, Swipe Right, Swipe Up
+- Gravity-based jumping with a natural arc.
+- Lane switching must use easing (smooth slide, not instant teleport).
+- Speed gradually increases over time.
+
+COINS:
+- Golden/yellow coins with glow effect.
+- Coins spawn in straight lines, curves, or lane patterns.
+- Coin pickup animation (scale + fade).
+- Coin counter displayed in HUD.
+- Coin collection increases score/coin count but does not end the game.
+
+OBSTACLES:
+- Obstacles inspired by barriers/trains but redesigned in original 2D style.
+- Hitting or dashing into an obstacle does NOT immediately end the game.
+- Instead, collisions trigger the police chase mechanic.
+
+POLICE CHASE MECHANIC (VERY IMPORTANT):
+- A police character (original design) runs behind the player.
+- Normally stays at a safe distance.
+- If the player:
+  - Hits an obstacle
+  - Misses a jump
+  - Dashes incorrectly
+  → the police moves closer and starts chasing aggressively.
+- Police chase lasts for a LIMITED TIME after the mistake.
+- If the player runs cleanly for a few seconds (no collisions),
+  the police slowly falls back again.
+- If the police reaches the player during a chase:
+  → GAME OVER.
+- Police movement must be smooth and animated, not instant.
+- Police should not block lanes; it only creates pressure.
+
+VISUAL STYLE & COLORS (MATCH FEEL):
+- Bright, saturated Subway-Surfers-style color palette:
+  - Sky: cyan → light blue gradient
+  - Accents: yellow, orange, red
+  - Highlights: turquoise / teal
+- Rounded shapes everywhere (player, UI, buttons).
+- Cartoon proportions with thick outlines.
+- Soft shadows and glow effects.
+- High-contrast, energetic mobile-game look.
+
+BACKGROUND & DEPTH (2D FAKE-3D):
+- Gradient sky background.
+- City/building silhouettes with parallax scrolling.
+- 3-lane track with perspective illusion:
+  - Near lanes wider
+  - Far lanes narrower
+- Obstacles and coins scale as they approach the player to simulate depth.
+
+UI SCREENS (MOBILE-GAME QUALITY):
+1. START SCREEN:
+   - Large graffiti-style title (original name).
+   - Bright gradient background.
+   - Idle animation on runner.
+   - Big rounded “Tap to Start” button.
+2. IN-GAME HUD:
+   - Score at top center.
+   - Coin counter near score.
+   - Bold white text with soft shadow.
+   - Semi-transparent rounded HUD background.
+3. GAME OVER SCREEN:
+   - Darkened or blurred background.
+   - Centered card-style popup.
+   - Final score and coins collected.
+   - Bright restart button with press animation.
+
+ANIMATION & FEEL:
+- requestAnimationFrame-based game loop (60fps).
+- Smooth easing for all movement.
+- Jump uses velocity + gravity physics.
+- Subtle screen shake when police gets very close.
+- Smooth fade/scale UI transitions.
+
+CODE QUALITY:
+- Clean, modular, interview-friendly ES6 code.
+- Constants for speed, gravity, chase duration.
+- Avoid global namespace pollution.
+- Clear comments explaining logic.
+- Responsive canvas resizing.
+
+GOAL:
+The game should feel almost identical to Subway Surfers in gameplay tension and UI energy, especially with coins and temporary police chase after mistakes, while being fully original, fully 2D, and implemented as a polished frontend web project.

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Bright, cartoonish palette */
+  --background: 200 100% 95%; /* Light sky blue */
+  --foreground: 220 50% 15%;  /* Dark navy text */
+  
+  --primary: 190 90% 45%;     /* Bright Cyan */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 45 100% 50%;   /* Coin Gold/Yellow */
+  --secondary-foreground: 30 100% 15%;
+
+  --muted: 210 20% 90%;
+  --muted-foreground: 215 20% 40%;
+  
+  --accent: 340 85% 60%;      /* Pink/Red Accent */
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 85% 55%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 210 30% 80%;
+  --input: 210 30% 90%;
+  --ring: 190 90% 45%;
+  
+  --radius: 1rem;
+  
+  /* Custom game fonts */
+  --font-display: 'Bangers', cursive;
+  --font-body: 'Fredoka', sans-serif;
+}
+
+.dark {
+  /* Slightly deeper colors for night mode if needed, but keeping game vibrant */
+  --background: 230 40% 10%;
+  --foreground: 210 40% 98%;
+  --primary: 190 80% 50%;
+  --primary-foreground: 0 0% 100%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased font-body overflow-hidden;
+    background-image: radial-gradient(circle at center, hsl(190 60% 95%), hsl(200 70% 90%));
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-widest uppercase;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+  }
+}
+
+/* Custom UI Utilities for Cartoon Style */
+@layer components {
+  .btn-game {
+    @apply relative px-8 py-4 text-2xl uppercase tracking-widest rounded-2xl 
+           font-display transition-all duration-200 active:scale-95
+           shadow-[0_6px_0_0_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_0_0_rgba(0,0,0,0.2)]
+           active:translate-y-1 active:shadow-none border-4 border-white/30;
+  }
+
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border-4 border-white rounded-3xl shadow-xl;
+  }
+  
+  .text-stroke {
+    -webkit-text-stroke: 2px hsl(var(--foreground));
+    paint-order: stroke fill;
+  }
+  
+  .text-stroke-sm {
+    -webkit-text-stroke: 1px hsl(var(--foreground));
+    paint-order: stroke fill;
+  }
+}
+
+/* Canvas Container */
+#game-canvas {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  touch-action: none;
+}

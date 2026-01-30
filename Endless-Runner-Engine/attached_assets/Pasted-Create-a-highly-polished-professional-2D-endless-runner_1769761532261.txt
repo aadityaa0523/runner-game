@@ -1,0 +1,116 @@
+Create a highly polished, professional 2D endless runner game that matches the visual style, interface layout, color language, animation feel, and frontend polish of Subway Surfers as closely as possible, while remaining fully original and implemented entirely in 2D.
+
+ABSOLUTE CONSTRAINTS:
+- The game must be FULLY 2D (no 3D, no WebGL).
+- Do NOT use the Subway Surfers name, logo, characters, fonts, or assets.
+- Everything must be original but stylistically equivalent.
+- Use ONLY HTML, CSS, and vanilla JavaScript.
+- This must look like a real mobile game frontend, not a basic web demo.
+
+TECH STACK:
+- HTML5 Canvas for gameplay rendering
+- CSS for UI, overlays, transitions, and typography
+- Vanilla JavaScript (ES6)
+- Files: index.html, style.css, script.js
+
+VISUAL STYLE & COLOR MATCH (CRITICAL):
+- Bright, saturated, playful color palette inspired by Subway Surfers:
+  - Sky gradients: cyan → light blue
+  - Accent colors: yellow, orange, red
+  - Highlights: turquoise / teal
+- Smooth gradients (no flat colors).
+- Rounded corners for all UI elements.
+- Cartoon-style visuals with thick outlines.
+- Soft shadows and glow effects.
+- High-contrast, energetic mobile-game aesthetic.
+
+BACKGROUND & DEPTH (FAKE 3D IN 2D):
+- Gradient sky background.
+- City/building silhouettes with parallax scrolling.
+- 3-lane track with perspective illusion:
+  - Near lanes wider
+  - Far lanes narrower
+- Obstacles and collectibles scale as they approach the player to simulate depth.
+
+PLAYER, COINS & OBSTACLES:
+- Stylized original runner character with idle animation.
+- Gravity-based jumping with a natural arc.
+- Smooth lane switching using easing (slide animation).
+- Obstacles inspired by barriers/trains but redesigned and simplified in 2D.
+- Coins:
+  - Bright golden/yellow circular coins with glow effect.
+  - Spawn in single lines or arcs across lanes.
+  - Coin pickup animation (scale + fade).
+  - Coin counter displayed in HUD.
+- Player shadow under character for grounding.
+
+POLICE CHASE MECHANIC (IMPORTANT FEATURE):
+- A police character (original design) appears behind the player.
+- Initially stays slightly behind the player.
+- If the player:
+  - Hits an obstacle
+  - Misses a jump
+  - Slows down due to collision
+  → the police moves closer.
+- If the player recovers and runs cleanly, police slowly falls back.
+- If police reaches the player:
+  - Trigger GAME OVER.
+- Police movement should be smooth and animated, not instant.
+- Police chase adds tension but does not block lanes.
+
+UI SCREENS (MATCH MOBILE GAME LAYOUT):
+1. START SCREEN:
+   - Large graffiti-style title (original name).
+   - Bright gradient background.
+   - Floating runner idle animation.
+   - Big rounded “Tap to Start” button.
+2. IN-GAME HUD:
+   - Score at top center.
+   - Coin counter near score.
+   - Bold white font with soft shadow.
+   - Semi-transparent rounded HUD background.
+3. GAME OVER SCREEN:
+   - Darkened or blurred gameplay background.
+   - Centered rounded popup card.
+   - Final score and total coins collected.
+   - Bright restart button with scale animation.
+
+ANIMATION & FEEL (VERY IMPORTANT):
+- Smooth 60fps animation using requestAnimationFrame.
+- Easing for lane switching and UI transitions.
+- Jump uses velocity + gravity physics.
+- Obstacles and coins scale smoothly as they approach.
+- Subtle screen shake on collision.
+- Smooth fade/scale transitions between screens.
+
+GAMEPLAY:
+- Endless runner with automatic forward motion.
+- 3-lane system.
+- Controls:
+  - Desktop: Arrow Left, Arrow Right, Arrow Up
+  - Mobile: Swipe Left, Swipe Right, Swipe Up
+- Collision detection using bounding boxes.
+- Coin collection increases coin count.
+- Speed gradually increases with time.
+- Police chase intensity increases with mistakes.
+- Score increases based on survival time.
+
+TECHNICAL QUALITY:
+- Clean, modular, interview-friendly ES6 code.
+- Constants for tuning speed, gravity, spawn rate.
+- Avoid global namespace pollution.
+- Clear, meaningful variable and function names.
+- Well-commented logic for easy explanation.
+- Responsive canvas resizing on window resize.
+
+OPTIONAL POLISH:
+- Subtle sound effects (coin pickup, jump, crash).
+- Screen shake when police gets very close.
+- Restart without page reload.
+
+DELIVERABLE:
+- Full working code for index.html, style.css, and script.js.
+- Ready to run in browser and deploy on GitHub Pages.
+
+GOAL:
+The game should immediately FEEL like Subway Surfers — including coins and police chase tension — while remaining fully original, fully 2D, and implemented as a polished frontend web project.
